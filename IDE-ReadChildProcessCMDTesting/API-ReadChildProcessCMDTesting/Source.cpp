@@ -109,9 +109,9 @@ RunChildProcessCommand(const char *Cmd)
 }
 
 int
-main()
+main(int argc, char *argv[])
 {
-    auto buf = RunChildProcessCommand("cmd.exe /c dir c:\\");
+    auto buf = RunChildProcessCommand(argv[1]);
     if (buf)
     {
         MessageBoxA(0, buf, "Success", MB_OK);
