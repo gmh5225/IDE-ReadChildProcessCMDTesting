@@ -111,7 +111,7 @@ RunChildProcessCommand(const char *Cmd)
 int
 main(int argc, char *argv[])
 {
-    auto buf = RunChildProcessCommand(argv[1]);
+    char* buf = RunChildProcessCommand(argv[1]);
     if (buf)
     {
         MessageBoxA(0, buf, "Success", MB_OK);
